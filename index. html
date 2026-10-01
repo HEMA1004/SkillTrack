@@ -1,12 +1,240 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>SkillTrack</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillTrack | Student Dashboard</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f7fb;
+            color: #1f2937;
+        }
+
+        header {
+            background: #4f46e5;
+            color: white;
+            padding: 25px 8%;
+        }
+
+        header h1 {
+            font-size: 30px;
+        }
+
+        header p {
+            margin-top: 8px;
+            opacity: 0.9;
+        }
+
+        .container {
+            width: 84%;
+            max-width: 1100px;
+            margin: 30px auto;
+        }
+
+        .welcome {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .welcome h2 {
+            margin-bottom: 8px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+        }
+
+        .number {
+            font-size: 30px;
+            font-weight: bold;
+            color: #4f46e5;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+        }
+
+        .skill {
+            margin: 18px 0;
+        }
+
+        .skill-title {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 7px;
+        }
+
+        .progress {
+            height: 10px;
+            background: #e5e7eb;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .bar {
+            height: 100%;
+            background: #4f46e5;
+        }
+
+        .internship {
+            border: 1px solid #e5e7eb;
+            padding: 18px;
+            border-radius: 12px;
+            margin-top: 15px;
+        }
+
+        .status {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            background: #dcfce7;
+            color: #166534;
+            font-size: 13px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #6b7280;
+        }
+
+        @media (max-width: 700px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                width: 90%;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1>SkillTrack</h1>
+<header>
+    <h1>SkillTrack 🚀</h1>
     <p>Student Skill & Internship Tracker</p>
+</header>
+
+<div class="container">
+
+    <div class="welcome">
+        <h2>Welcome, Hema 👋</h2>
+        <p>Track your skills, learning progress and internship journey in one place.</p>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Skills</h3>
+            <div class="number">3</div>
+            <p>Skills Learning</p>
+        </div>
+
+        <div class="card">
+            <h3>Internships</h3>
+            <div class="number">2</div>
+            <p>Applications</p>
+        </div>
+
+        <div class="card">
+            <h3>Progress</h3>
+            <div class="number">65%</div>
+            <p>Overall Learning</p>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <h2>My Skills 📚</h2>
+
+        <div class="skill">
+            <div class="skill-title">
+                <span>HTML</span>
+                <span>80%</span>
+            </div>
+            <div class="progress">
+                <div class="bar" style="width:80%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-title">
+                <span>CSS</span>
+                <span>70%</span>
+            </div>
+            <div class="progress">
+                <div class="bar" style="width:70%"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <div class="skill-title">
+                <span>Python</span>
+                <span>50%</span>
+            </div>
+            <div class="progress">
+                <div class="bar" style="width:50%"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <h2>Internship Tracker 💼</h2>
+
+        <div class="internship">
+            <h3>Web Development Intern</h3>
+            <p>Company: Example Company</p>
+            <p>Application Status:</p>
+            <span class="status">Applied</span>
+        </div>
+
+        <div class="internship">
+            <h3>Python Developer Intern</h3>
+            <p>Company: Example Company</p>
+            <p>Application Status:</p>
+            <span class="status">Applied</span>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 SkillTrack | Built by Hema</p>
+</footer>
 
 </body>
 </html>
